@@ -1,0 +1,43 @@
+/* fonts */
+$font: 'Osward', Helvetica, Arial;
+
+/* colors */
+$primary: #ff8562;
+$primary-hover: #f5a187;
+$red: #e93c3c;
+$white: #FFFFFF;
+$black: #000000;
+$bg: #E6ECF3;
+$gray-light: #DBDBDB;
+$gray-lighter: #E5E7EF;
+$gray: #CCCCCC;
+$gray-dark: #BABEC8;
+$gray-darker: #A4A4A4;
+$gray-darkest: #445163;
+$gray-border: #748498;
+$black-light: #474747;
+$progress-bar-background: #E4E4E4;
+
+/* font sizes */
+$smaller: 0.8rem;
+$small: 0.9rem;
+$normal: 1rem;
+$larger: 1.2rem;
+$large: 1.385rem;
+$largest: 1.7rem;
+$subtitle: 2rem;
+$title: 2.45rem;
+
+/* shadows */
+$shadow-control: 0px 3px 6px #00000008;
+$shadow-list-item: 0px 4px 6px #0000001A;
+$shadow-bottom: 0px 3px 6px #00000029;
+$shadow-top: 0px 0px 6px #00000029;
+$shadow-dropdown: 0px 5px 30px rgba($black, 0.1);
+$shadow-page: 0px 0px 4px 2px $gray-light;
+
+/* responsiveness breakpoints */
+$smalldesktop: 1279px;
+$tablet: 1023px;
+$mobile: 767px;
+
