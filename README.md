@@ -1,1 +1,1 @@
-# job-competencies-frontend
+# Job competencies [FRONTEND]
