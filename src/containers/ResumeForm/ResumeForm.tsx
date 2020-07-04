@@ -5,21 +5,30 @@ import { ServerValidationErrors } from '../../components/ServerValidationError/S
 import { FormikProps, FormikValues, Form, Field, Formik } from 'formik';
 import { TextareaField } from '../../components/TextareaField/TextareaField';
 import { SubmitButton } from '../../components/SubmitButton/SubmitButton';
+import { SkillsRequest } from '../../models/SkillsRequest';
+import { SkillsSelectors } from '../../redux/selectors/Skills';
+import { useSelector } from 'react-redux';
+import { SkillsActions } from '../../redux/actions/Skills';
+import store from '../../redux/ConfigureStore';
 
 export function ResumeForm(): ReactElement {
-  const errorResponse: any = {};
-  const isSubmitting: boolean = false;
+  const errorResponse = useSelector(SkillsSelectors.errorResponse);
+  const isSubmitting = useSelector(SkillsSelectors.isSubmitting);
 
-  const initialValues = {
+  const initialValues: SkillsRequest = {
     resume: '',
   };
 
   const validationSchema = Yup.object().shape({
-    resume: Yup.string().required('')
+    resume: Yup.string().required('Ошибка')
   });
 
   function sendResumeText(values: FormikValues): void {
-    console.log(values)
+    const credentials = new SkillsRequest({
+      resume: values.resume
+    });
+
+    store.dispatch(SkillsActions.getSkills(credentials));
   }
 
   return (

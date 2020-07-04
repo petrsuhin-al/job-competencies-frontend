@@ -15,7 +15,7 @@ export class SkillsActions {
 
   public static getSkillsSuccess = createActionCreator(
     '[Main Page] Get Skills By Resume Success',
-    (resolve) => (news: SkillsResponse) => resolve(news)
+    (resolve) => (data: SkillsResponse) => resolve(data)
   );
 
   public static getSkillsFailure = createActionCreator(
