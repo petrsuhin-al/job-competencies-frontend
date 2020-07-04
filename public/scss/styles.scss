@@ -1,44 +1,10 @@
 @import "variables";
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto Thin'),
-  url('/fonts/Roboto Thin.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Roboto Light'), local('Roboto Light'),
-  url('/fonts/Roboto-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto Regular'),
-  url('/fonts/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto Medium'),
-  url('/fonts/Roboto-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Roboto Bold'), local('Roboto Bold'),
-  url('/fonts/Roboto-Bold.ttf') format('truetype');
-}
+@import "layouts/Icons";
+@import "layouts/FontFaces";
+@import "layouts/Grid";
+@import "layouts/Page";
+@import "layouts/Form";
+@import "layouts/Buttons";
 
 *, :after, :before {
   box-sizing: initial;
@@ -62,127 +28,7 @@ h1, h2, h3, h4 {margin: 0 0 1em 0; font-weight: bold; padding: 0;}
 a {text-decoration: none; color: $primary; transition: all 0.6s; cursor: pointer;
   &:hover {transition: all 0.2s;}
 }
+
 .link {border-bottom: transparent 1px solid;
   &:hover {border-bottom-color: $primary-hover;}
-}
-
-/* grid */
-.row {margin: 0 -10px; display: flex; flex-basis: 0; flex-wrap: wrap;}
-.col {flex: 1 0 0; padding: 0 10px; box-sizing: border-box;
-  &-right {float: right;}
-  &-10 {min-width: 10%; flex-basis: 10%;}
-  &-14 {min-width: 14.285%; flex-basis: 14.285%;}
-  &-20 {min-width: 20%; flex-basis: 20%;}
-  &-23 {min-width: 23%; flex-basis: 23%;}
-  &-25 {min-width: 25%; flex-basis: 25%;}
-  &-28 {min-width: 28%; flex-basis: 28%;}
-  &-33 {min-width: 33.33%; flex-basis: 33.33%;}
-  &-35 {min-width: 35%; flex-basis: 35%;}
-  &-36 {min-width: 36.5%; flex-basis: 36.5%;}
-  &-37 {min-width: 37.5%; flex-basis: 37.5%;}
-  &-38 {min-width: 38.5%; flex-basis: 38.5%;}
-  &-40 {min-width: 40%; flex-basis: 40%;}
-  &-50 {min-width: 50%; flex-basis: 50%;}
-  &-60 {min-width: 60%; flex-basis: 60%;}
-  &-65 {min-width: 65%; flex-basis: 65%;}
-  &-66 {min-width: 66.66%; flex-basis: 66.66%;}
-  &-72 {min-width: 72%; flex-basis: 72%;}
-  &-75 {min-width: 75%; flex-basis: 75%;}
-  &-80 {min-width: 80%; flex-basis: 80%;}
-}
-@media (max-width: $smalldesktop) {
-  .col-smalldesktop {
-    &-10 {min-width: 10%; flex-basis: 10%;}
-    &-14 {min-width: 14.285%; flex-basis: 14.285%;}
-    &-20 {min-width: 20%; flex-basis: 20%;}
-    &-23 {min-width: 23%; flex-basis: 23%;}
-    &-25 {min-width: 25%; flex-basis: 25%;}
-    &-28 {min-width: 28%; flex-basis: 28%;}
-    &-31 {min-width: 31%; flex-basis: 31%;}
-    &-33 {min-width: 33.33%; flex-basis: 33.33%;}
-    &-35 {min-width: 35%; flex-basis: 35%;}
-    &-36 {min-width: 36.5%; flex-basis: 36.5%;}
-    &-37 {min-width: 37.5%; flex-basis: 37.5%;}
-    &-38 {min-width: 38.5%; flex-basis: 38.5%;}
-    &-40 {min-width: 40%; flex-basis: 40%;}
-    &-50 {min-width: 50%; flex-basis: 50%;}
-    &-60 {min-width: 60%; flex-basis: 60%;}
-    &-65 {min-width: 65%; flex-basis: 65%;}
-    &-66 {min-width: 66.66%; flex-basis: 66.66%;}
-    &-69 {min-width: 69%; flex-basis: 69%;}
-    &-72 {min-width: 72%; flex-basis: 72%;}
-    &-75 {min-width: 75%; flex-basis: 75%;}
-    &-80 {min-width: 80%; flex-basis: 80%;}
-  }
-}
-@media (max-width: $mobile) {
-  .col {width: 100%; flex: 0 0 100%;
-    &-mobile {
-      &-10 {width: 10%; flex-basis: 10%;}
-      &-14 {width: 14.285%; flex-basis: 14.285%;}
-      &-20 {width: 20%; flex-basis: 20%;}
-      &-23 {width: 23%; flex-basis: 23%;}
-      &-25 {width: 25%; flex-basis: 25%;}
-      &-28 {width: 28%; flex-basis: 28%;}
-      &-33 {width: 33.33%; flex-basis: 33.33%;}
-      &-35 {width: 35%; flex-basis: 35%;}
-      &-36 {width: 36.5%; flex-basis: 36.5%;}
-      &-37 {width: 37.5%; flex-basis: 37.5%;}
-      &-38 {width: 38.5%; flex-basis: 38.5%;}
-      &-40 {width: 40%; flex-basis: 40%;}
-      &-50 {width: 50%; flex-basis: 50%;}
-      &-60 {width: 60%; flex-basis: 60%;}
-      &-65 {width: 65%; flex-basis: 65%;}
-      &-66 {width: 66.66%; flex-basis: 66.66%;}
-      &-75 {width: 75%; flex-basis: 75%;}
-      &-72 {width: 72%; flex-basis: 72%;}
-      &-80 {width: 80%; flex-basis: 80%;}
-    }
-  }
-}
-
-/* page */
-.page {height: 100%; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column;
-  &-content {padding: 40px; background: $bg; margin-top: 40px;}
-  &-container {position: relative; max-width: 1440px; margin: 0 auto;
-    box-sizing: border-box;
-  }
-}
-
-/* forms */
-.form {
-  &-group {margin-bottom: 2rem; position: relative;}
-  &-control.disabled, &-control:disabled {cursor: default; pointer-events: none; opacity: 0.45;
-    & ~ .icon {opacity: 0.45;}
-  }
-  &-label {font-size: $larger; color: $gray-darkest; margin-bottom: 5px; display: block;}
-  &-error {margin-top: 5px; font-size: 1rem; color: $red;}
-  &-errors {text-align: center; color: $red;}
-  &-buttons {margin-top: 3rem;}
-  &-footer {text-align: center;}
-  &-link {text-align: center; font-size: $larger; color: $primary;
-    &:hover {border-bottom-color: $primary-hover; color: $primary-hover;}
-  }
-  &-cancel {position: absolute; top: 37px; right: 20px;
-    .icon {background: $gray-border;}
-  }
-}
-textarea.form-control {font-size: 1.1rem; resize: vertical; min-height: 150px; padding: 20px;}
-
-/* buttons */
-.button {display: inline-block; font-size: $larger; background: $primary; width: 100%; font-weight: 100;
-  line-height: 35px; padding: 8px 18px; border-radius: 8px; color: $white; text-align: center; cursor: pointer;
-  transition: all 0.6s;
-  .icon {opacity: 1; transition: all 0.6s; margin-right: 14px;}
-  &:hover {background: $primary-hover; transition: all 0.2s;}
-  &-disabled, &-disabled:hover {cursor: default; pointer-events: none; opacity: 0.8;}
-  &-with-icon {line-height: 30px; padding: 8px 30px 8px 20px;}
-  &-with-small-icon {line-height: 20px; padding: 14px 30px 13px 20px;}
-  &-loading {pointer-events: none; opacity: 0.8; position: relative; color: transparent;
-    .icon {opacity: 0; transition: all 0.2s;}
-    &::after {position: absolute; width: 12px; height: 12px; border: $white 3px solid; border-top-color: transparent;
-      animation: spin 1s linear infinite; content: ""; top: 0; left: 0; bottom: 0; right: 0; margin: auto;
-      border-radius: 50%;
-    }
-  }
 }

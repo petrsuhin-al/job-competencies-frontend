@@ -1,0 +1,22 @@
+@import "public/scss/variables";
+
+.skill-item {padding: 10px 20px; border-radius: 100px; border: 1px solid $primary;
+  transition: all .3s; display: flex; vertical-align: middle; margin: 5px;
+  background: $primary; box-shadow: 0 4px 15px rgba($primary, .25); color: $white;
+  cursor: pointer; align-items: center;
+
+  &-remove {width: 20px; height: 20px; opacity: 0; transition: all .3s; margin-left: -20px;
+    .icon {width: 20px; height: 20px;
+      &-close {--bg-position: -150px 0px;}
+    }
+
+    &-wrap {width: 100%; height: 100%; border: 1px solid transparent; border-radius: 50%;
+      transition: border .3s;
+      &:hover {border: 1px solid $bg;}
+    }
+  }
+
+  &:hover {
+    .skill-item-remove {padding-left: 40px; margin-left: 0; margin-right: -10px; opacity: 1;}
+  }
+}

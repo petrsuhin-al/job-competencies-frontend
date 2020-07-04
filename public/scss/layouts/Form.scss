@@ -1,0 +1,20 @@
+@import "../variables";
+
+.form {
+  &-group {margin-bottom: 2rem; position: relative;}
+  &-control.disabled, &-control:disabled {cursor: default; pointer-events: none; opacity: 0.45;
+    & ~ .icon {opacity: 0.45;}
+  }
+  &-label {font-size: $larger; color: $gray-darkest; margin-bottom: 5px; display: block;}
+  &-error {margin-top: 5px; font-size: 1rem; color: $red;}
+  &-errors {text-align: center; color: $red;}
+  &-buttons {margin-top: 3rem;}
+  &-footer {text-align: center;}
+  &-link {text-align: center; font-size: $larger; color: $primary;
+    &:hover {border-bottom-color: $primary-hover; color: $primary-hover;}
+  }
+  &-cancel {position: absolute; top: 37px; right: 20px;
+    .icon {background: $gray-border;}
+  }
+}
+textarea.form-control {font-size: 1.1rem; resize: vertical; min-height: 150px; padding: 20px;}
