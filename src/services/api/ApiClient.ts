@@ -4,7 +4,7 @@ export default class ApiClient {
   public baseURL: string;
   public httpClient: AxiosInstance;
 
-  constructor(baseURL = process.env.REACT_APP_API_URL || '', auth = true) {
+  constructor(baseURL = process.env.REACT_APP_API_URL || '') {
     this.baseURL = baseURL;
     this.httpClient = axios.create({ baseURL });
   }
