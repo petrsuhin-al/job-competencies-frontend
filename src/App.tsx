@@ -6,6 +6,7 @@ import { AppState } from './redux/ConfigureStore';
 import { Store } from 'redux';
 import { connect, Provider } from 'react-redux';
 import { History } from 'history';
+import { SkillItems } from './components/Skill/SkillItems';
 
 interface Props {
   store: Store<AppState>;
@@ -29,7 +30,7 @@ function App(props: Props) {
               <ResumeForm />
             </div>
             <div className="col col-28">
-
+              <SkillItems />
             </div>
           </div>
         </div>

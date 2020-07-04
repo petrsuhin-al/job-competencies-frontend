@@ -23,7 +23,7 @@ export function ResumeForm(): ReactElement {
     resume: Yup.string().required('Ошибка')
   });
 
-  function sendResumeText(values: FormikValues): void {
+  const sendResumeText = (values: FormikValues): void => {
     const credentials = new SkillsRequest({
       resume: values.resume
     });

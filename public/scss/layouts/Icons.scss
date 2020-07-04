@@ -1,0 +1,12 @@
+@import "../variables";
+
+.icon {width: 30px; height: 30px; display: inline-block; vertical-align: top;
+  background-image: url(/img/icons.svg); background-position: var(--bg-position);
+  transition: all 300ms;
+
+  &-mask {mask-image: url(/img/icons.svg); mask-position: var(--bg-position);
+    &-grey {background: $bg;}
+  }
+
+  &-close {--bg-position: -146px 4px;}
+}

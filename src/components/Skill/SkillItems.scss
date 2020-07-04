@@ -1,0 +1,5 @@
+@import "public/scss/variables";
+
+.skill-items {display: flex; flex-wrap: wrap;
+  @media (max-width: $mobile) {padding-top: 50px;}
+}
