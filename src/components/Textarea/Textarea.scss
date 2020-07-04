@@ -1,8 +1,0 @@
-@import "./public/scss/variables";
-
-.app-header {text-align: center; height: 90px; top: 0; position: sticky; background: $white;
-  z-index: 2; box-shadow: 0 4px 10px rgba(70,128,255,.15); padding: 10px 30px;
-
-  &-logo {width: 130px;}
-  &-link {display: block;}
-}
