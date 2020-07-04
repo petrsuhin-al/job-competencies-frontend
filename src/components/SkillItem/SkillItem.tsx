@@ -3,16 +3,20 @@ import './SkillItem.scss';
 
 interface Props {
   item: string
+  handleRemove: (item: string) => void;
 }
 
 export function SkillItem(props: Props): ReactElement {
-  const { item } = props;
+  const { item, handleRemove } = props;
 
   return (
     <div className="skill-item">
       { item }
       <div className="skill-item-remove">
-        <div className="skill-item-remove-wrap">
+        <div
+          onClick={() => handleRemove(item)}
+          className="skill-item-remove-wrap"
+        >
           <span className="icon icon-close icon-mask icon-mask-grey" />
         </div>
       </div>
