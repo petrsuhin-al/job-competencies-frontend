@@ -1,11 +1,15 @@
 import React, { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
 import { SkillsSelectors } from '../../redux/selectors/Skills';
-import { SkillItem } from './SkillItem';
+import { SkillItem } from '../../components/SkillItem/SkillItem';
 import './SkillItems.scss';
 
 export function SkillItems(): ReactElement {
   const items = useSelector(SkillsSelectors.skills);
+
+  const removeItem = (item: string): void => {
+    console.log(item)
+  }
 
   return (
     <div className="skill-items">
@@ -15,8 +19,12 @@ export function SkillItems(): ReactElement {
           ? (
             <div className="skill-items-data">
               {
-                items.map((item) => (
-                  <SkillItem item={item} />
+                items.map((item, key) => (
+                  <SkillItem
+                    key={key}
+                    item={item}
+                    handleRemove={removeItem}
+                  />
                 ))
               }
             </div>

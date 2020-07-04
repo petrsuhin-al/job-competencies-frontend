@@ -6,7 +6,7 @@ import { AppState } from './redux/ConfigureStore';
 import { Store } from 'redux';
 import { connect, Provider } from 'react-redux';
 import { History } from 'history';
-import { SkillItems } from './components/Skill/SkillItems';
+import { SkillItems } from './containers/SkillItems/SkillItems';
 
 interface Props {
   store: Store<AppState>;
