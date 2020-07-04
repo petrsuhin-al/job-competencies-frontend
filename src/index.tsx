@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import history from './history';
+import store from './redux/ConfigureStore';
 import 'reflect-metadata';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App history={history} store={store} />
   </React.StrictMode>,
   document.getElementById('root')
 );
