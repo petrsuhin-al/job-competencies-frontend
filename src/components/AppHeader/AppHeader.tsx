@@ -1,8 +1,8 @@
 import logo from '../../logo.png';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import './AppHeader.scss';
 
-export function AppHeader() {
+export function AppHeader(): ReactElement {
   return (
     <header className="app-header">
       <img
