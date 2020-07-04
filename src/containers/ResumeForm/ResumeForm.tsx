@@ -39,6 +39,7 @@ export function ResumeForm(): ReactElement {
               touched={props.touched.resume}
               value={props.values.resume}
             />
+
             <ServerValidationErrors errorResponse={errorResponse}/>
 
             <SubmitButton
