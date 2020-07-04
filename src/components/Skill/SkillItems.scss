@@ -1,5 +1,11 @@
 @import "public/scss/variables";
 
-.skill-items {display: flex; flex-wrap: wrap;
+.skill-items {
   @media (max-width: $mobile) {padding-top: 50px;}
+
+  &-data {display: flex; flex-wrap: wrap; padding-top: 10px;}
+  &-title {font-size: $large; font-weight: 600;}
+  &-empty {padding: 70px 30px; line-height: 25px; font-weight: 800;
+    font-size: 20px; text-align: center; color: #d4d4d4;
+  }
 }

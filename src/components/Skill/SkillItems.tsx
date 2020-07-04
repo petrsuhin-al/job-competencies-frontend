@@ -9,10 +9,23 @@ export function SkillItems(): ReactElement {
 
   return (
     <div className="skill-items">
+      <span className="skill-items-title">Твои навыки:</span>
       {
-        items.map((item) => (
-          <SkillItem item={item} />
-        ))
+        (items.length)
+          ? (
+            <div className="skill-items-data">
+              {
+                items.map((item) => (
+                  <SkillItem item={item} />
+                ))
+              }
+            </div>
+          )
+          : (
+            <div className="skill-items-empty">
+              Введи данные в поле, для того, чтоб мы определили твои навыки
+            </div>
+          )
       }
     </div>
   );
