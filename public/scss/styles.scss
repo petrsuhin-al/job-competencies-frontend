@@ -1,13 +1,44 @@
 @import "variables";
 
 @font-face {
-  font-family: 'Osward';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
-  src: local('Osward'), local('Osward'),
-  url('/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto Thin'),
+  url('/fonts/Roboto Thin.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Roboto Light'), local('Roboto Light'),
+  url('/fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto Regular'),
+  url('/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto Medium'),
+  url('/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Roboto Bold'), local('Roboto Bold'),
+  url('/fonts/Roboto-Bold.ttf') format('truetype');
+}
 
 *, :after, :before {
   box-sizing: initial;
@@ -136,11 +167,11 @@ a {text-decoration: none; color: $primary; transition: all 0.6s; cursor: pointer
     .icon {background: $gray-border;}
   }
 }
-textarea.form-control {font-size: 1.1rem; resize: vertical; min-height: 150px;}
+textarea.form-control {font-size: 1.1rem; resize: vertical; min-height: 150px; padding: 20px;}
 
 /* buttons */
-.button {display: inline-block; font-size: $larger; background: $primary; width: 100%;
-  line-height: 35px; padding: 8px 18px; border-radius: 8px; color: #fff; text-align: center; cursor: pointer;
+.button {display: inline-block; font-size: $larger; background: $primary; width: 100%; font-weight: 100;
+  line-height: 35px; padding: 8px 18px; border-radius: 8px; color: $white; text-align: center; cursor: pointer;
   transition: all 0.6s;
   .icon {opacity: 1; transition: all 0.6s; margin-right: 14px;}
   &:hover {background: $primary-hover; transition: all 0.2s;}
