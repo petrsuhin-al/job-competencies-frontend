@@ -3,20 +3,26 @@ import { useSelector } from 'react-redux';
 import { SkillsSelectors } from '../../redux/selectors/Skills';
 import { SkillItem } from '../../components/SkillItem/SkillItem';
 import './SkillItems.scss';
+import { Loader } from '../../components/Loader/Loader';
+import store from '../../redux/ConfigureStore';
+import { SkillsActions } from '../../redux/actions/Skills';
 
 export function SkillItems(): ReactElement {
-  const items = useSelector(SkillsSelectors.skills);
+  let items = useSelector(SkillsSelectors.skills);
+  const isFormSubmitting = useSelector(SkillsSelectors.isSubmitting);
 
   const removeItem = (item: string): void => {
-    console.log(item)
+    store.dispatch(SkillsActions.removeSkillSuccess(item));
   }
 
   return (
     <div className="skill-items">
       <span className="skill-items-title">Твои навыки:</span>
       {
-        (items.length)
-          ? (
+        (isFormSubmitting)
+          ? <Loader />
+          : (items.length)
+            ? (
             <div className="skill-items-data">
               {
                 items.map((item, key) => (
@@ -28,12 +34,12 @@ export function SkillItems(): ReactElement {
                 ))
               }
             </div>
-          )
-          : (
+            )
+            : (
             <div className="skill-items-empty">
               Введи данные в поле, для того, чтоб мы определили твои навыки
             </div>
-          )
+            )
       }
     </div>
   );
