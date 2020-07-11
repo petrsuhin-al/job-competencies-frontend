@@ -26,10 +26,10 @@ function App(props: Props) {
         <AppHeader />
         <div className="page-content">
           <div className="row">
-            <div className="col col-72">
+            <div className="col col-60">
               <ResumeForm />
             </div>
-            <div className="col col-28">
+            <div className="col col-40">
               <SkillItems />
             </div>
           </div>

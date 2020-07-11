@@ -32,32 +32,36 @@ export function ResumeForm(): ReactElement {
   }
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={sendResumeText}
-      validationSchema={validationSchema}
-    >
-      {
-        (props: FormikProps<FormikValues>): ReactElement => (
-          <Form className="form resume-form">
-            <Field
-              name="resume"
-              component={TextareaField}
-              onChange={props.handleChange}
-              error={props.errors.resume}
-              touched={props.touched.resume}
-              value={props.values.resume}
-            />
+    <div>
+      <span className="skill-items-title">Твое резюме:</span>
 
-            <ServerValidationErrors errorResponse={errorResponse}/>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={sendResumeText}
+        validationSchema={validationSchema}
+      >
+        {
+          (props: FormikProps<FormikValues>): ReactElement => (
+            <Form className="form resume-form">
+              <Field
+                name="resume"
+                component={TextareaField}
+                onChange={props.handleChange}
+                error={props.errors.resume}
+                touched={props.touched.resume}
+                value={props.values.resume}
+              />
 
-            <SubmitButton
-              text="Определить навыки"
-              isSubmitting={isSubmitting}
-            />
-          </Form>
-        )
-      }
-    </Formik>
+              <ServerValidationErrors errorResponse={errorResponse}/>
+
+              <SubmitButton
+                text="Определить навыки"
+                isSubmitting={isSubmitting}
+              />
+            </Form>
+          )
+        }
+      </Formik>
+    </div>
   );
 }

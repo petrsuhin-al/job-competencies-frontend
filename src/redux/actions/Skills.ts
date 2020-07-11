@@ -22,4 +22,14 @@ export class SkillsActions {
     '[Main Page] Get Skills By Resume Failure',
     (resolve) => (response: AxiosError) => resolve(response)
   );
+
+  public static removeSkill = createActionCreator(
+    '[News Page] Remove Skill',
+    (resolve) => (data: string) => resolve(data)
+  );
+
+  public static removeSkillSuccess = createActionCreator(
+    '[News Page] Remove Skill Success',
+    (resolve) => (data: string) => resolve(data)
+  );
 }
